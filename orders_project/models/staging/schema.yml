@@ -33,3 +33,42 @@ models:
           - not_null
       - name: email
         description: Lowercased email address.
+
+  - name: stg_customer_regions
+    description: One row per customer with their cleaned-up sales region.
+    columns:
+      - name: customer_id
+        description: The customer this region belongs to.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: region
+        description: Sales region the customer belongs to.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['North America', 'South America', 'Europe', 'Middle East', 'APAC']
+
+  - name: stg_customer_genders
+    description: One row per customer with their gender spelled out.
+    columns:
+      - name: customer_id
+        description: The customer this gender belongs to.
+        data_tests:
+          - unique
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_customers')
+                field: customer_id
+      - name: gender
+        description: female, male, or unknown.
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['female', 'male', 'unknown']

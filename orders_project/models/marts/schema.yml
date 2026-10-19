@@ -1,8 +1,22 @@
 version: 2
 
 models:
+  - name: dim_customers
+    description: One row per customer with everything we know about them (names, email, region, gender).
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: region
+        description: Sales region the customer belongs to.
+        data_tests:
+          - not_null
+      - name: gender
+        description: female, male, or unknown.
+
   - name: customer_revenue
-    description: One row per customer with their completed orders and total revenue.
+    description: One row per customer with their region, gender, completed orders and total revenue.
     columns:
       - name: customer_id
         data_tests:
