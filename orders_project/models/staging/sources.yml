@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: shop
+    description: Raw data from the online shop (loaded here as seeds).
+    schema: main
+    tables:
+      - name: raw_orders
+        description: One row per order, exactly as the shop exports it.
+      - name: raw_customers
+        description: One row per customer, exactly as the shop exports it.

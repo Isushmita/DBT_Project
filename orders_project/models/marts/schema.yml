@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: customer_revenue
+    description: One row per customer with their completed orders and total revenue.
+    columns:
+      - name: customer_id
+        data_tests:
+          - unique
+          - not_null
+      - name: total_revenue
+        description: Sum of completed order amounts, in dollars.

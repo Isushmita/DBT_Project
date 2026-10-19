@@ -1,0 +1,9 @@
+# Tells dbt how to connect to the database.
+# DuckDB is a database stored in a single local file, so no server or account is needed.
+orders_project:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: dev.duckdb
+      threads: 1

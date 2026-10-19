@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.profiles.windows": {
+			"dbt": {
+				"path": "powershell.exe",
+				"args": ["-NoExit", "-ExecutionPolicy", "Bypass", "-Command", "Set-Location 'C:/Users/joshc/OneDrive/Documents/DBT_Course/orders_project'; & 'C:/Users/joshc/.venvs/dbt/Scripts/Activate.ps1'"],
+				"icon": "database"
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "dbt"
+	}
+}
