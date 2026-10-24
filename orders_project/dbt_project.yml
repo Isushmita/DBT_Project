@@ -9,5 +9,9 @@ models:
   orders_project:
     staging:
       +materialized: view    # staging models are lightweight views
+    intermediate:
+      +materialized: view    # reusable building blocks between staging and marts
     marts:
       +materialized: table   # final models are real tables
+    playground:
+      +materialized: view    # experiments only, nothing depends on these

@@ -17,3 +17,4 @@ id,cust_id,amt_cents,status,created
 16,107,3900,completed,2026-10-13
 17,104,1500,COMPLETED,2026-10-14
 18,103,2100,cancelled,2026-10-15
+19,101,1200,pending,2026-10-16
