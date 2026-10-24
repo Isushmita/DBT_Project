@@ -8,7 +8,7 @@ description: Run, inspect or troubleshoot the user's practice dbt project (order
 The user is learning dbt. Run what they ask, then explain the output in plain language: what was built, what passed or failed, and why.
 
 ## Facts
-- Project folder: `C:\Users\joshc\OneDrive\Documents\DBT_Course\orders_project`
+- Project folder: `C:\Users\joshc\Repos\DBT_Project\orders_project`
 - dbt 1.12 (dbt Core v1) with DuckDB, installed in a venv at `C:\Users\joshc\.venvs\dbt` (outside OneDrive on purpose).
 - Run dbt by full path, from the project folder: `C:\Users\joshc\.venvs\dbt\Scripts\dbt.exe <command> --no-version-check`
 - `profiles.yml` lives in the project folder; the database is the file `dev.duckdb`.

@@ -9,3 +9,7 @@ sources:
         description: One row per order, exactly as the shop exports it.
       - name: raw_customers
         description: One row per customer, exactly as the shop exports it.
+      - name: raw_customer_regions
+        description: One row per customer with the sales region they belong to.
+      - name: raw_customer_genders
+        description: One row per customer with their gender code (M/F).
